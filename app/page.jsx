@@ -13,7 +13,7 @@ export default function Home() {
   });
 
   const scaleFemale = useTransform(scrollYProgress, [0, 1], [0.6, 1.3]);
-  const scaleMale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
+  const scaleMale = useTransform(scrollYProgress, [0, 1], [1.2, 0.8]);
 
   const variants = {
     slideDown: { y: -100, opacity: 0 },
@@ -74,11 +74,12 @@ export default function Home() {
         <img src="/wave.svg" alt="wave" className="object-cover" />
       </div>
 
-      <section className="bg-[#ffc0c0] h-full flex items-center justify-center gap-16 p-10">
+      <section className="bg-[#d1e7e0] h-full flex items-center justify-center gap-16 p-16">
         <InfoCard
           title={"RECRUITMENT"}
           content=' "innate" aims to find right personnel and them apply for open positions in the organization, to offer a better opportunity for better applicants and vacancies. We are always striving to bridge the gap between the company and job searchers by bringing them together via the use of cutting-edge hiring tactics.For the applicant to fit with the companys principles, beliefs, and culture, we also consider the prospects attitude, behavior, and mindset as we move on with the recruiting process.'
           variant={variants.slideDown}
+          className="self-start"
         />
 
         <InfoCard
@@ -91,7 +92,7 @@ export default function Home() {
           their daily lives and to identify solutions that would lead to a
           situation that would be beneficial to both employers and
           applicants."
-          className={"self-end"}
+          className="self-end"
           variant={variants.slideUp}
         />
 
@@ -104,6 +105,7 @@ export default function Home() {
               into the companies in accordance with their needs and learn about
               the operational pain factors that are causing them to lose talent.
             "
+          className="self-start"
           variant={variants.slideDown}
         />
       </section>
